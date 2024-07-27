@@ -1,0 +1,78 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["title"] = "Feedback";
+}
+
+<h2>Submit Feedback</h2>
+
+<form id="feedbackForm">
+    @Html.AntiForgeryToken()
+    <div>
+
+        <label for="userName">Name:</label>
+
+        <input type="text" id="userName" name="userName" required>
+
+    </div>
+
+    <div>
+
+        <label for="userFeedback">Feedback:</label>
+
+<textarea id="userFeedback" name="userFeedback" required></textarea>
+
+    </div>
+
+    <div>
+
+        <button type="button" onclick="submitFeedback()">Submit</button>
+
+    </div>
+
+</form>
+
+
+<script>
+
+    function submitFeedback() {
+
+        // Get form data
+
+        var formData = {
+
+            userName: document.getElementById('userName').value,
+
+            userFeedback: document.getElementById('userFeedback').value
+
+        };
+
+        // Perform AJAX request
+
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/Feedback/SubmitFeedback',
+
+            data: { 
+                ...formData, 
+                __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+            },
+
+            success: function (response) {
+                    alert(response.message);
+            },
+
+            error: function () {
+
+                alert('An error occurred while submitting feedback.');
+
+            }
+
+        });
+
+    }
+
+</script>
