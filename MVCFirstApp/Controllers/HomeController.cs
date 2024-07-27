@@ -15,7 +15,12 @@ namespace MVCFirstApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            return RedirectToPage("./Index");
         }
 
         public IActionResult Privacy()
