@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TonwktQD7BgCg6UQFp7lE2lPJJeerGbbFJfEmrjXVPM=",
+  "Hash": "zs/x4UC2kEUMeHHkmPHJD9t/OmzH17ZnRKoSfePT+eE=",
   "Source": "MVCFirstApp",
   "BasePath": "_content/MVCFirstApp",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\apps\\asp.net\\MVCFirstApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVCFirstApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\apps\\asp.net\\MVCFirstApp\\wwwroot\\css\\mycss.css",
+      "SourceId": "MVCFirstApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\apps\\asp.net\\MVCFirstApp\\wwwroot\\",
+      "BasePath": "_content/MVCFirstApp",
+      "RelativePath": "css/mycss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\mycss.css"
     },
     {
       "Identity": "C:\\apps\\asp.net\\MVCFirstApp\\wwwroot\\css\\site.css",

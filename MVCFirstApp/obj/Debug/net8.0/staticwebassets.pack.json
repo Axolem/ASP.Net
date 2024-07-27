@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MVCFirstApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\apps\\asp.net\\MVCFirstApp\\wwwroot\\css\\mycss.css",
+      "PackagePath": "staticwebassets\\css\\mycss.css"
+    },
+    {
       "Id": "C:\\apps\\asp.net\\MVCFirstApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
