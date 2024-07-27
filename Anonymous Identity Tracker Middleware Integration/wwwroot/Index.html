@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anonymous Identity Tracker</title>
+
+</head>
+
+<body>
+
+    <div>
+
+        <h2>Greeting Message</h2>
+
+        <p id="greeting-message"></p>
+
+    </div>
+
+
+    <script>
+
+        // Fetch the greeting message from the server
+
+        fetch('/')
+
+            .then(response => response.text())
+
+            .then(data => {
+
+                document.getElementById('greeting-message').innerText = data;
+
+            });
+
+    </script>
+
+</body>
+
+</html>
