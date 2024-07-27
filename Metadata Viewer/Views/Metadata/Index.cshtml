@@ -1,0 +1,52 @@
+﻿@model MetadataModel
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Web Application Metadata</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h2>Web Application Metadata</h2>
+
+        <hr />
+
+
+        <dl class="row">
+
+            <dt class="col-sm-3">Application Name:</dt>
+
+            <dd class="col-sm-9">@Model.ApplicationName</dd>
+
+
+            <dt class="col-sm-3">Application Base Path:</dt>
+
+            <dd class="col-sm-9">@Model.ApplicationBasePath</dd>
+
+
+            <dt class="col-sm-3">Target Framework:</dt>
+
+            <dd class="col-sm-9">@Model.TargetFramework</dd>
+
+
+            <dt class="col-sm-3">Version:</dt>
+
+            <dd class="col-sm-9">@Model.Version</dd>
+
+        </dl>
+
+    </div>
+
+</body>
+
+</html>
