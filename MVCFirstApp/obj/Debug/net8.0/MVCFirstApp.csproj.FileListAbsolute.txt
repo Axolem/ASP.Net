@@ -28,3 +28,4 @@ C:\apps\asp.net\MVCFirstApp\obj\Debug\net8.0\refint\MVCFirstApp.dll
 C:\apps\asp.net\MVCFirstApp\obj\Debug\net8.0\MVCFirstApp.pdb
 C:\apps\asp.net\MVCFirstApp\obj\Debug\net8.0\MVCFirstApp.genruntimeconfig.cache
 C:\apps\asp.net\MVCFirstApp\obj\Debug\net8.0\ref\MVCFirstApp.dll
+C:\apps\asp.net\MVCFirstApp\obj\Debug\net8.0\MVCFirstApp.sourcelink.json
