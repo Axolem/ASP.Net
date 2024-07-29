@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Book>
+
+@{
+    ViewBag.Title = "Authors";
+}
+
+<h1>
+    @ViewBag.Title
+</h1>
+
+
+<ul>
+    @foreach (var book in Model)
+    {
+        <li>
+            <details>
+                <summary> @book.Title -by: @book.Author.FirstName @book.Author.LastName</summary>
+                <p>@book.Description</p>
+            </details>
+        </li>
+    }
+</ul>
+
+<div>
+    @Html.ActionLink("New", "create")
+</div>

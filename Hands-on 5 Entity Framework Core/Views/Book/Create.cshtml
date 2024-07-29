@@ -1,0 +1,24 @@
+﻿@model Book
+
+@{
+    ViewBag.Title = "New author";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.Title)
+        @Html.TextBoxFor(Model => Model.Title, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.Description)
+        @Html.TextBoxFor(Model => Model.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.AuthorId)
+        @Html.TextBoxFor(Model => Model.AuthorId, new { @class = "form-control" })
+    </div>
+    <button type="submit">Save</button>
+}

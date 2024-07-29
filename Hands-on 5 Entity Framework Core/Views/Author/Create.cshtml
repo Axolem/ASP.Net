@@ -1,0 +1,20 @@
+﻿@model Author
+
+@{
+    ViewBag.Title = "New author";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.FirstName)
+        @Html.TextBoxFor(Model => Model.FirstName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(Model => Model.LastName)
+        @Html.TextBoxFor(Model => Model.LastName, new { @class="form-control" })
+    </div>
+   <button type="submit">Save</button>
+}

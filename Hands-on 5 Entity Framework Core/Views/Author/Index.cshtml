@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Author>
+
+@{
+    ViewBag.Title = "Authors";
+}
+
+
+<h1>
+    @ViewBag.Title
+</h1>
+
+
+<ul>
+    @foreach (var author in Model)
+    {
+        <li>
+            @author.LastName @author.FirstName
+        </li>
+    }
+</ul>
+
+<div>
+    @Html.ActionLink("New", "create")
+</div>
