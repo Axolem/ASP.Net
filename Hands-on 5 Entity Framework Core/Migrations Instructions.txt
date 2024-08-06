@@ -1,11 +1,11 @@
 dotnet tool install --global dotnet-ef		// Make sure you have this installed (Run as administator powershell)
 dotnet tool update --global dotnet-ef
 
-dotnet ef migrations add CreateDatabase		// Initialise the migrations
+dotnet ef migrations add CreateDatabase		// Initialize the migrations
 
 dotnet ef database update 					// Creates the actual database
 
 dotnet ef migrations add LimitStrings		// Updates the database migrations
 
-dotnet ef database update 					// Applys the updates to the database
+dotnet ef database update 					// Apply the updates to the database
 
