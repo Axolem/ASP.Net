@@ -1,14 +1,5 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-
-# Check if user 'app' exists before creating
-RUN if ! id "app" &>/dev/null; then \
-        adduser --disabled-password --gecos "" app && \
-        chown -R app /app; \
-    fi
-
-USER app
-
 EXPOSE 8080
 EXPOSE 8081
 
