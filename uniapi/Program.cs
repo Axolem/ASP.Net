@@ -41,7 +41,6 @@ namespace uniapi
 
             _ = app.UseAuthorization();
 
-
             _ = app.MapControllers();
 
             app.Run();

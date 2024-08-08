@@ -16,7 +16,7 @@ namespace uniapi.Models
         public required string Name { get; set; }
 
         [JsonIgnore]
-        public required NpgsqlTsVector NameSearchVector { get; set; }
+        public NpgsqlTsVector? NameSearchVector { get; set; }
 
         [Required, MaxLength(5), MinLength(2), Column(name: "short_name")]
         public required string ShortName { get; set; }
@@ -33,6 +33,12 @@ namespace uniapi.Models
         {
             await using DBCtx ctx = new();
             return await ctx.Universities.AsNoTracking().ToListAsync();
+        }
+
+        public static async Task<List<Address>> AllWithAddresses()
+        {
+            await using DBCtx ctx = new();
+            return await ctx.Addresses.Include(address => address.University).ToListAsync();
         }
     }
 }

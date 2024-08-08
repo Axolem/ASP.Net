@@ -9,22 +9,29 @@ namespace uniapi.Controllers
     {
 
         private readonly ILogger<UniversityController> _logger;
+        private readonly IWebHostEnvironment _env;
 
-        public UniversityController(ILogger<UniversityController> logger)
+        public UniversityController(ILogger<UniversityController> logger, IWebHostEnvironment env)
         {
             _logger = logger;
+            _env = env;
         }
 
-        public async Task<List<University>> Index()
+        [HttpGet]
+        public async Task<ActionResult<List<IDictionary<string, string>>>> Index([FromQuery] bool addresses = false)
         {
             try
             {
-                return await University.All();
+                return addresses ? (ActionResult<List<IDictionary<string, string>>>)Ok(await University.AllWithAddresses()) : (ActionResult<List<IDictionary<string, string>>>)Ok(await University.All());
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                NotFound();
-                return [];
+                if (_env.IsDevelopment())
+                {
+                    Console.Write(e.ToString());
+                }
+
+                return StatusCode(500, "An internal server error occurred.");
             }
         }
     }
