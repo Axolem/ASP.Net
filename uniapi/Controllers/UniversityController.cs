@@ -4,7 +4,7 @@ using uniapi.Models;
 namespace uniapi.Controllers
 {
     [ApiController]
-    [Route("universities")]
+    [Route("api/universities")]
     public class UniversityController : ControllerBase
     {
 
@@ -18,7 +18,8 @@ namespace uniapi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<IDictionary<string, string>>>> Index([FromQuery] bool addresses = false)
+
+        public async Task<ActionResult<List<IDictionary<string, string>>>> Index([FromHeader(Name = "X-API-KEY")] string? k, [FromQuery] bool addresses = false)
         {
             try
             {
